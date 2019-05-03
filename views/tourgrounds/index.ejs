@@ -1,0 +1,33 @@
+<% include ../partial/header %>
+
+<div class = "container">
+    <header class = "jumbotron">
+        
+            <h1>This is the tour attractions page!</h1>
+            <p>View out hand-picked tourist attractions from United States</p>
+            <p>
+                <a class = "btn btn-primary btn-lg" href = "/tourgrounds/new">Add new Tourist Attraction</a>
+            </p>
+        
+    </header>
+    
+    
+    <div class = "row text-center" style = "display: flex; flex-wrap: wrap";>
+        <% tourgrounds.forEach(function(tourground){ %>
+            <div class = "col-lg-3 col-md-6">
+                <div class = "card">
+                    <img class = "card-img-top" src = "<%= tourground.image %>" height = "200" width = "250">
+                    <div class = "caption">
+                        <h4><%= tourground.name %></h4>
+                    </div>
+                    <p>
+                        <a href = "/tourgrounds/<%= tourground._id %>" class = "btn btn-primary">More info</a>
+                    </p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    
+</div>
+    
+<% include ../partial/footer %>

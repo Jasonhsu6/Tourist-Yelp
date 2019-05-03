@@ -1,0 +1,11 @@
+.card .card-img-top{
+    width: 100%;
+}
+
+.card {
+    padding: 1;
+}
+
+.card .caption-full{
+    padding : 9px;
+}
